@@ -4,7 +4,11 @@ $LOAD_PATH.push File.join(File.dirname(__FILE__),"/../lib")
 require "mastermind"
 
 game = Mastermind::Game.new(STDOUT)
-messages = game.start
-messages.each do |message|
-	puts message
+messages = game.start(%w[r g y c])
+while guess = gets
+	if guess != "exit\n"
+		game.guess guess.split
+	else
+		exit
+	end
 end
