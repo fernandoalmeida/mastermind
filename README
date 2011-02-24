@@ -1,0 +1,5 @@
+The game of Mastermind involves two players: the code-maker and the code-breaker. The job of the code-breaker is to deduce a secret code made up of four colors chosen by the code-maker. Six colors are possible to made the secret code: B=Black, C=Cyan, G=Green, R=Red, Y=Yellow, W=White.
+
+The code-maker chooses a secret code. The code-breaker gets some number of chances (typically ten) to break the code. In each turn, the code-breaker takes a guess at the code, placing 4 colors. The code-maker then marks the guess with black and white.
+
+The black marker indicates that one the colors in the guess is the right color and in the right position, but not reveal which one. A white marker indicates that one of the colors in the guess is of a color which is in the solution (again without revealing which one), but is in the wrong position. For example, if the score is 2 black and 1 white, then we know that the guess has three colors that are part of the code and two of them are actually in the right positions.
