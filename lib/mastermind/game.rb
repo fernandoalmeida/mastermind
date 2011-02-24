@@ -13,15 +13,15 @@ module Mastermind
 		end
 
 		def guess(guess)
-			result = []
+			result = [nil, nil, nil, nil]
 			guess.each_with_index do |peg,i|
 				if @code[i] == peg
-					result << "b"
+					result[i] = "b"
 				elsif @code.include? peg
-					result << "w"
+					result[@code.index(peg)] ||= "w"
 				end
 			end
-			@messenger.puts result.sort.join
+			@messenger.puts result.compact.sort.join
 		end
 		
 	end
